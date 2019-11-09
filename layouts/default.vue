@@ -1,8 +1,32 @@
 <template>
-  <div>
-    <nuxt />
+  <div id="container-fluid">
+    <TheHeader></TheHeader>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="col-md-2 col-sm-2 col-xs-2">
+          <Sidebar></Sidebar>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8">
+          <nuxt />
+        </div>
+      </div>
+    </div>
+    <TheFooter></TheFooter>
   </div>
 </template>
+<script>
+import TheHeader from '~/components/Navigation/TheHeader.vue'
+import TheFooter from '~/components/Navigation/TheFooter.vue'
+import Sidebar from '~/components/Navigation/Sidebar.vue'
+
+export default {
+  components: {
+    TheHeader,
+    Sidebar,
+    TheFooter
+  }
+}
+</script>
 
 <style>
 html {
@@ -51,5 +75,20 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.app-container {
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template: auto 1fr auto / 1fr;
+}
+
+.app-content {
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 </style>
