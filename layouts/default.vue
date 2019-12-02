@@ -1,4 +1,5 @@
 <template>
+<v-app>
   <div id="container-fluid">
     <TheHeader></TheHeader>
     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -13,6 +14,7 @@
     </div>
     <TheFooter></TheFooter>
   </div>
+</v-app>
 </template>
 <script>
 import TheHeader from '~/components/Navigation/TheHeader.vue'

@@ -1,14 +1,13 @@
 <template>
   <div>
-    <b-navbar navbar-expand toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="/">Document Proof</b-navbar-brand>
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav class="ml-auto">
-          <b-nav-item href="#">Prijava</b-nav-item>
-          <b-nav-item href="#">Registracija</b-nav-item>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
+    <v-toolbar color="#9be3de">
+      <v-toolbar-title>DocumentProof</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn text>Prijava</v-btn>
+        <v-btn text>Registracija</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
   </div>
 </template>
 
