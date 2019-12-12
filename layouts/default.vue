@@ -1,20 +1,20 @@
 <template>
-<v-app>
-  <div id="container-fluid">
-    <TheHeader></TheHeader>
-    <div class="col-md-12 col-sm-12 col-xs-12">
-      <div class="row">
-        <div class="col-md-2 col-sm-2 col-xs-2">
-          <Sidebar></Sidebar>
-        </div>
-        <div class="col-md-8 col-sm-8 col-xs-8">
-          <nuxt />
+  <v-app>
+    <div id="container-fluid">
+      <TheHeader></TheHeader>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="row">
+          <div class="col-md-2 col-sm-2 col-xs-2">
+            <Sidebar></Sidebar>
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-8">
+            <nuxt />
+          </div>
         </div>
       </div>
+      <TheFooter></TheFooter>
     </div>
-    <TheFooter></TheFooter>
-  </div>
-</v-app>
+  </v-app>
 </template>
 <script>
 import TheHeader from '~/components/Navigation/TheHeader.vue'
