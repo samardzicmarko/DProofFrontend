@@ -29,7 +29,6 @@ export default {
       axios
         .get(path)
         .then(res => {
-          console.log('dsfj')
           this.posts = res.data
           console.log('posts', data.data)
         })

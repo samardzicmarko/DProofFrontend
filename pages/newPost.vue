@@ -3,9 +3,18 @@
     <v-card-title>Nova obavijest</v-card-title>
     <v-col ref="form" cols="12" md="8">
       <v-form ref="newPostForm" v-if="Show">
-        <v-text-field v-model="postForm.title" label="Naslov" required></v-text-field>
-        <v-textarea v-model="postForm.content" label="Sadržaj obavijesti"></v-textarea>
-        <v-btn depressed color="primary" type="submit" @click="submitPost">Objavi</v-btn>
+        <v-text-field
+          v-model="postForm.title"
+          label="Naslov"
+          required
+        ></v-text-field>
+        <v-textarea
+          v-model="postForm.content"
+          label="Sadržaj obavijesti"
+        ></v-textarea>
+        <v-btn depressed color="primary" type="submit" @click="submitPost"
+          >Objavi</v-btn
+        >
       </v-form>
       <succes :message="message" v-if="showMessage"></succes>
     </v-col>
@@ -69,6 +78,8 @@ export default {
         title: this.postForm.title,
         content: this.postForm.content
       }
+      alert(JSON.stringify(post))
+
       this.addPost(post)
       this.initForm()
     },
@@ -79,5 +90,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style></style>

@@ -5,7 +5,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn text>Prijava</v-btn>
-        <v-btn text>Registracija</v-btn>
+        <v-btn text to="/register">Registracija</v-btn>
       </v-toolbar-items>
     </v-toolbar>
   </div>
@@ -17,5 +17,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style></style>

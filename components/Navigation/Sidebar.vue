@@ -33,6 +33,7 @@
         <v-list-item @click to="/obrasci">
           <v-list-item-content>Obrasci</v-list-item-content>
         </v-list-item>
+        
       </v-list>
 
       <template v-slot:append>

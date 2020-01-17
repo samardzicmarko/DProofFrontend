@@ -36,7 +36,7 @@
         <v-expansion-panel-content>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn class="mx-2" id="addObrazac" fab outlined dark x-small color="#9be3de">
+            <v-btn class="mx-2" id="addObrazac" fab outlined dark x-small color="#9be3de" to="noviObrazac">
               <v-icon dark>mdi-plus</v-icon>
             </v-btn>
           </v-card-actions>Obrazac za prijavu štete od elementarne nepogode
