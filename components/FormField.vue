@@ -4,7 +4,6 @@
           <div class="col">
               <input type="text" class="form-control" placeholder="Naziv obrasca"></div>
           </div>
-      </div>
   </form>
 </template>
 

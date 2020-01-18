@@ -4,7 +4,7 @@
       <v-toolbar-title>DocumentProof</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn text>Prijava</v-btn>
+        <v-btn text to="/login">Prijava</v-btn>
         <v-btn text to="/register">Registracija</v-btn>
       </v-toolbar-items>
     </v-toolbar>
