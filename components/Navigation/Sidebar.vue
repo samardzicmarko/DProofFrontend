@@ -27,13 +27,15 @@
             <v-list-item-title>Dokumenti</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item @click to="/users">
-          <v-list-item-content>Korisnici</v-list-item-content>
+        <v-list-item @click to="/addForm">
+          <v-list-item-content>Dodavanje forme</v-list-item-content>
         </v-list-item>
         <v-list-item @click to="/obrasci">
           <v-list-item-content>Obrasci</v-list-item-content>
         </v-list-item>
-        
+        <v-list-item @click to="/ladice">
+          <v-list-item-content>Ladice</v-list-item-content>
+        </v-list-item>
       </v-list>
 
       <template v-slot:append>
