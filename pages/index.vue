@@ -2,10 +2,12 @@
   <v-card class="mx-auto">
     <v-card-title>
       <div>Najnovije obavijesti</div>
-      <v-btn text small color="secondary" to="newPost">Dodaj obavijest</v-btn>
+      <v-btn class="ma-2" small outlined color="indigo" to="/post/new">Dodaj obavijest</v-btn>
     </v-card-title>
-    <div v-for="(post, i) in posts" :key="i">
-      <v-card-text>{{post.title}}</v-card-text>
+    <div v-for="post in posts" :key="post.id">
+      <v-card-text>
+        <router-link :to="{name: 'detail',params: {postId: post.id}}">{{ post.title }}</router-link>
+      </v-card-text>
     </div>
     <v-card-actions>
       <v-btn text small color="primary">Prikazi više</v-btn>
@@ -16,33 +18,28 @@
 <script>
 import axios from 'axios'
 import { error } from 'util'
+import firebase from 'firebase'
+import { db } from '@/plugins/firebase'
 
 export default {
   data() {
     return {
-      posts: {}
+      posts: []
     }
   },
-  methods: {
-    getPosts() {
-      const path = 'http://localhost:8000/posts/'
-      axios
-        .get(path)
-        .then(res => {
-          this.posts = res.data
-          console.log('posts', data.data)
-        })
-        .catch(error => {
-          // eslint-disable-next-line
-          console.error(error)
-        })
-    }
-  },
+  // Dohvacanje tablice post u Firebaseu
   mounted() {
-    this.getPosts()
+    db.collection('post')
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          let post = doc.data()
+          post.id = doc.id
+          this.posts.push(post) // push funkcija puni polje postova
+        })
+      })
   }
 }
 </script>
 
-<style>
-</style>
+<style></style>

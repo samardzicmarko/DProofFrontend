@@ -23,7 +23,8 @@
 import axios from 'axios'
 import { error } from 'util'
 import Succes from '@/components/Success.vue'
-import db from '@/components/firebaseInit'
+import firebase from 'firebase'
+import { db } from '@/plugins/firebase'
 export default {
   data() {
     return {
