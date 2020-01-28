@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto">
+  <v-card class="mx-auto" height="100%">
     <v-card-title>Nova obavijest</v-card-title>
     <v-col ref="form" cols="12" md="8">
       <v-form ref="newPostForm" v-if="Show">

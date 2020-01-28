@@ -17,7 +17,7 @@
       <v-divider></v-divider>
 
       <v-list nav>
-        <v-list-item @click to="/">
+        <v-list-item @click to="/post">
           <v-list-item-content>
             <v-list-item-title>Početna</v-list-item-title>
           </v-list-item-content>
@@ -27,7 +27,7 @@
             <v-list-item-title>Dokumenti</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item @click to="/addForm">
+        <v-list-item @click to="/form">
           <v-list-item-content>Dodavanje forme</v-list-item-content>
         </v-list-item>
         <v-list-item @click to="/obrasci">
