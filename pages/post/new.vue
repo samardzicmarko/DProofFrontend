@@ -3,15 +3,8 @@
     <v-card-title>Nova obavijest</v-card-title>
     <v-col ref="form" cols="12" md="8">
       <v-form ref="newPostForm" v-if="Show">
-        <v-text-field
-          v-model="postForm.title"
-          label="Naslov"
-          required
-        ></v-text-field>
-        <v-textarea
-          v-model="postForm.content"
-          label="Sadržaj obavijesti"
-        ></v-textarea>
+        <v-text-field v-model="postForm.title" label="Naslov" required></v-text-field>
+        <v-textarea v-model="postForm.content" label="Sadržaj obavijesti"></v-textarea>
         <v-btn depressed color="primary" @click="savePost">Objavi</v-btn>
       </v-form>
       <succes :message="message" v-if="showMessage"></succes>
@@ -49,8 +42,8 @@ export default {
           content: this.postForm.content
         })
         .then(docRef => {
-          console.log('Post added: ', docRef.title)
-          this.$router.push('/')
+          this.showMessage = true
+          this.$router.push('/post')
         })
         .catch('Error adding new post', error)
     }

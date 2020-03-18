@@ -1,12 +1,14 @@
 <template>
   <v-card class="mx-auto">
     <v-card-title>
-      <v-row align="left" style="padding:10px;">
-        <v-chip draggable>Nova obavijest</v-chip>
-      </v-row>
-      <div id="post-title">
-        <h3>{{ posts.title }}</h3>
-      </div>
+      <b-row align="left" style="padding:10px;">
+        <v-chip id="badge" draggable>Nova obavijest</v-chip>
+        <b-col cols="10">
+          <div id="post-title">
+            <h3>{{ posts.title }}</h3>
+          </div>
+        </b-col>
+      </b-row>
     </v-card-title>
     <v-card-text>
       <div id="post-content">
@@ -64,5 +66,8 @@ export default {
   text-align: left;
 }
 #post-content {
+}
+#badge {
+  margin: 10px;
 }
 </style>
