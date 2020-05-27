@@ -37,7 +37,7 @@
         <v-col cols="12" sm="10" md="8" lg="8">
           <div id="additional-info">
             Nemaš korisnički račun?
-            <v-btn text small color="primary">Registriraj se</v-btn>
+            <v-btn text small color="primary" to="register">Registriraj se</v-btn>
           </div>
           <v-spacer></v-spacer>
           <v-spacer></v-spacer>

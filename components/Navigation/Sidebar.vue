@@ -33,7 +33,7 @@
         <v-list-item @click to="/obrasci">
           <v-list-item-content>Obrasci</v-list-item-content>
         </v-list-item>
-        <v-list-item @click to="/ladice">
+        <v-list-item @click to="/ladica">
           <v-list-item-content>Ladice</v-list-item-content>
         </v-list-item>
       </v-list>

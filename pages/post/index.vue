@@ -11,6 +11,32 @@
         <nuxt-link :to="'/post/' + post.title">{{ post.title }}</nuxt-link>
       </v-card-text>
     </div>
+    <div class="dash-tab">
+      <div class="row">
+        <div class="col-4">
+          <v-card>
+            <v-card-title>
+              Dodavanje novih dokumenata
+            </v-card-title>
+            <v-card-body> </v-card-body>
+          </v-card>
+        </div>
+        <div class="col-4">
+          <v-card>
+            <v-card-title>
+              Pending requests
+            </v-card-title>
+            <v-card-body> </v-card-body>
+          </v-card>
+        </div>
+        <div class="col-4">
+          <v-card>
+            <v-card-title> Neki feature </v-card-title>
+            <v-card-body> </v-card-body>
+          </v-card>
+        </div>
+      </div>
+    </div>
     <div id="pagination-footer">
       <v-card-actions>
         <jw-pagination
@@ -70,5 +96,9 @@ export default {
 #pagination-footer {
   position: absolute;
   bottom: 0;
+}
+
+.dash-tab {
+  padding-top: 50px;
 }
 </style>
