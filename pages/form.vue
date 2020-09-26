@@ -11,46 +11,26 @@
               <template v-slot:activator="{ on }">
                 <div class="toolbar">
                   <p>Alatna traka</p>
-                  <v-btn v-on="on" @click="currentComponent = 'textField'"
-                    >Unos teksta</v-btn
-                  >
+                  <v-btn v-on="on" @click="currentComponent = 'textField'">Unos teksta</v-btn>
                   <v-btn v-on="on">Broj</v-btn>
-                  <v-btn v-on="on" @click="currentComponent = 'oibInput'"
-                    >OIB</v-btn
-                  >
+                  <v-btn v-on="on" @click="currentComponent = 'oibInput'">OIB</v-btn>
                   <v-btn v-on="on">E-mail</v-btn>
-                  <v-btn v-on="on" @click="currentComponent = 'fileField'"
-                    >Prilog</v-btn
-                  >
-                  <v-btn v-on="on" @click="currentComponent = 'textArea'"
-                    >Tekst s više redaka</v-btn
-                  >
-                  <v-btn v-on="on" @click="currentComponent = 'select'"
-                    >Odabir od ponuđenog</v-btn
-                  >
+                  <v-btn v-on="on" @click="currentComponent = 'fileField'">Prilog</v-btn>
+                  <v-btn v-on="on" @click="currentComponent = 'textArea'">Tekst s više redaka</v-btn>
+                  <v-btn v-on="on" @click="currentComponent = 'select'">Odabir od ponuđenog</v-btn>
                 </div>
               </template>
               <v-card style="height: 300px;">
                 <v-card-title>Dodavanje nove komponente</v-card-title>
                 <div class="container">
-                  <v-text-field
-                    label="Unesite oznaku polja"
-                    v-model="textInput.label"
-                  ></v-text-field>
-                  <v-checkbox
-                    v-model="textInput.required"
-                    label="Obavezno polje?"
-                  ></v-checkbox>
+                  <v-text-field label="Unesite oznaku polja" v-model="textInput.label"></v-text-field>
+                  <v-checkbox v-model="textInput.required" label="Obavezno polje?"></v-checkbox>
                   <addOptions v-if="currentComponent === 'select'" />
                 </div>
 
                 <v-card-actions>
-                  <v-btn class="primary" @click="addNewInput(currentComponent)"
-                    >Spremi</v-btn
-                  >
-                  <v-btn class="secondary" @click="dialog = false"
-                    >Odustani</v-btn
-                  >
+                  <v-btn class="primary" @click="addNewInput(currentComponent)">Spremi</v-btn>
+                  <v-btn class="secondary" @click="dialog = false">Odustani</v-btn>
                 </v-card-actions>
               </v-card>
             </v-dialog>
@@ -63,18 +43,12 @@
             <div class="container">
               <div class="form-gorup">
                 {{ component }}
-                <component
-                  :is="component.type"
-                  v-bind="component"
-                  v-for="component in components"
-                ></component>
+                <component :is="component.type" v-bind="component" v-for="component in components"></component>
               </div>
             </div>
 
             <v-card-actions>
-              <v-btn class="ma-2" outlined color="indigo" @click="save()"
-                >Spremi formu</v-btn
-              >
+              <v-btn class="ma-2" outlined color="indigo" @click="save()">Spremi formu</v-btn>
             </v-card-actions>
           </div>
         </b-col>

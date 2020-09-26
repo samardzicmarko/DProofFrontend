@@ -31,15 +31,25 @@
       </v-dialog>
     </v-row>
     <v-expansion-panels :multiple="multiple">
-      <v-expansion-panel class="mb-6" v-for="(item, i) in 5" :key="i">
+      <v-expansion-panel class="mb-6">
         <v-expansion-panel-header expand-icon="mdi-menu-down">Obrazac</v-expansion-panel-header>
         <v-expansion-panel-content>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn class="mx-2" id="addObrazac" fab outlined dark x-small color="#9be3de" to="noviObrazac">
+            <v-btn
+              class="mx-2"
+              id="addObrazac"
+              fab
+              outlined
+              dark
+              x-small
+              color="#9be3de"
+              to="noviObrazac"
+            >
               <v-icon dark>mdi-plus</v-icon>
             </v-btn>
-          </v-card-actions>Obrazac za prijavu štete od elementarne nepogode
+          </v-card-actions>
+          <nuxt-link to="/kucaZaOdmor">Obrazac kuca za odmor</nuxt-link>
           <v-btn class="mx-2" id="editObrazac" outlined fab dark x-small color="#9be3de">
             <v-icon>mdi-pencil</v-icon>
           </v-btn>
