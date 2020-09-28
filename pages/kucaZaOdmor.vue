@@ -87,9 +87,9 @@ import axios from 'axios'
 import { error } from 'util'
 import firebase from 'firebase'
 import { db } from '@/plugins/firebase'
+import web3 from '@/contracts/web3'
 import process_contract from '@/contracts/process_contract'
 import obrazac from '@/contracts/obrazac_instance'
-
 const oib = require('oib.js')
 
 export default {
@@ -112,7 +112,9 @@ export default {
         godina: '',
         rijesenje: '',
         odredbe: false
-      }
+      },
+      value: 1,
+      admin: 'Grad pula'
     }
   },
   methods: {
@@ -135,15 +137,34 @@ export default {
         })
         .then(docRef => {
           this.showMessage = true
-          this.$router.push('/post')
+          this.$router.push('/obradiObrazac')
         })
         .catch('Error adding new obrazac-kuca-za-odmor', error)
     },
     createContract() {
-      web3.eth.getAccounts().then(accounts => {
-        console.log('proslo')
-        return dproof.methods.Obrazac()
-      })
+      web3.eth
+        .getAccounts()
+        .then(accounts => {
+          const value = web3.util.toWei(this.value, 'ether')
+
+          return dproof.obrazac(
+            this.obrazac.prebivaliste,
+            this.obrazac.email,
+            this.obrazac.owner,
+            this.admin,
+            this.value
+          )
+        })
+        .then(() => {
+          ;(this.obrazac.prebivaliste = ''),
+            (this.obrazac.email = ''),
+            (this.obrazac.owner = ''),
+            (this.admin = ''),
+            (this.value = 0)
+        })
+        .catch(err => {
+          console.error(err)
+        })
     }
   }
 }
