@@ -17,7 +17,7 @@
     "bootstrap-vue": "^2.0.0",
     "firebase": "^7.6.2",
     "jw-vue-pagination": "^1.0.3",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "oib.js": "^1.0.3",
     "vue-upload-component": "^2.8.20",
     "vuefire": "^2.2.1",
